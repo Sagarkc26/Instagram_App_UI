@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_ui/widget/story.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -42,6 +43,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
+      body: const StoryWidget(),
       bottomNavigationBar: NavigationBar(
         destinations: const [
           NavigationDestination(
@@ -69,9 +71,9 @@ class _HomePageState extends State<HomePage> {
               ),
               label: ""),
           NavigationDestination(
-              icon: Icon(
-                Icons.circle,
-                size: 37,
+              icon: CircleAvatar(
+                backgroundImage: AssetImage("images/circle.png"),
+                backgroundColor: Colors.white,
               ),
               label: ""),
         ],
