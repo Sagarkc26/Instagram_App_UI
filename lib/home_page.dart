@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
               label: ""),
           NavigationDestination(
               icon: CircleAvatar(
-                backgroundImage: AssetImage("images/circle.png"),
+                backgroundImage: AssetImage("images/heart.png"),
                 backgroundColor: Colors.white,
               ),
               label: ""),
