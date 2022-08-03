@@ -42,13 +42,13 @@ class StoryWidget extends StatelessWidget {
                               decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                                 image: DecorationImage(
-                                  image: AssetImage("images/heart.png"),
+                                  image: AssetImage("images/skc.jpg"),
                                 ),
                               ),
                             ),
                           ),
                         ),
-                        const Text("Heartimage"),
+                        const Text("sk"),
                       ],
                     ),
                   );

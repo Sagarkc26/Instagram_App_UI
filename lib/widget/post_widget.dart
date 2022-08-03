@@ -6,7 +6,7 @@ class PostWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 1,
+      itemCount: 3,
       itemBuilder: (context, index) {
         return Column(
           children: [
@@ -22,12 +22,41 @@ class PostWidget extends StatelessWidget {
               ),
             ),
             Container(
-              height: 400,
+              height: 390,
+              width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
                 image: DecorationImage(
+                  fit: BoxFit.cover,
                   image: AssetImage("images/skc.jpg"),
                 ),
               ),
+            ),
+            ListTile(
+              leading: Wrap(
+                spacing: 8,
+                children: const [
+                  Icon(
+                    Icons.favorite,
+                    color: Colors.red,
+                    size: 35,
+                  ),
+                  Icon(
+                    Icons.message,
+                    size: 35,
+                  ),
+                  Icon(
+                    Icons.share_outlined,
+                    size: 35,
+                  )
+                ],
+              ),
+              trailing: const Icon(
+                Icons.bookmark_border_outlined,
+                size: 35,
+              ),
+            ),
+            const Divider(
+              color: Colors.black,
             )
           ],
         );
