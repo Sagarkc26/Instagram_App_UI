@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_ui/widget/post_widget.dart';
 import 'package:instagram_ui/widget/story.dart';
 
 class HomePage extends StatefulWidget {
@@ -43,7 +44,17 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: const StoryWidget(),
+      body: Column(
+        children: const [
+          StoryWidget(),
+          Divider(
+            color: Colors.grey,
+          ),
+          Expanded(
+            child: PostWidget(),
+          ),
+        ],
+      ),
       bottomNavigationBar: NavigationBar(
         destinations: const [
           NavigationDestination(
