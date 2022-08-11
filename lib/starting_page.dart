@@ -7,10 +7,7 @@ class StartingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
       body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
@@ -21,22 +18,27 @@ class StartingPage extends StatelessWidget {
             ],
           ),
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(45.0),
-          child: Container(
-            height: 50,
-            width: MediaQuery.of(context).size.width,
-            child: FloatingActionButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) {
-                      return const HomePage();
-                    },
-                  ),
-                );
+      ),
+      floatingActionButton: GestureDetector(
+        onTap: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) {
+                return const HomePage();
               },
-              child: const Text("Get Started"),
+            ),
+          );
+        },
+        child: Container(
+          margin: const EdgeInsets.only(left: 30, right: 30),
+          height: 60,
+          width: 300,
+          decoration: BoxDecoration(
+              color: Colors.blue, borderRadius: BorderRadius.circular(20)),
+          child: const Center(
+            child: Text(
+              "Get Started",
+              style: TextStyle(fontSize: 20),
             ),
           ),
         ),

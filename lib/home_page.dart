@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:instagram_ui/widget/post_widget.dart';
 import 'package:instagram_ui/widget/story.dart';
@@ -44,6 +45,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
+      backgroundColor: Colors.deepPurple.shade100,
       body: Column(
         children: const [
           StoryWidget(),
@@ -55,38 +57,15 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      bottomNavigationBar: NavigationBar(
-        destinations: const [
-          NavigationDestination(
-              icon: Icon(
-                Icons.home,
-                size: 37,
-              ),
-              label: ""),
-          NavigationDestination(
-              icon: Icon(
-                Icons.search,
-                size: 37,
-              ),
-              label: ""),
-          NavigationDestination(
-              icon: Icon(
-                Icons.add,
-                size: 37,
-              ),
-              label: ""),
-          NavigationDestination(
-              icon: Icon(
-                Icons.shop,
-                size: 37,
-              ),
-              label: ""),
-          NavigationDestination(
-              icon: CircleAvatar(
-                backgroundImage: AssetImage("images/heart.png"),
-                backgroundColor: Colors.white,
-              ),
-              label: ""),
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.deepPurple.shade100,
+        color: Colors.deepPurple.shade300,
+        items: const [
+          Icon(Icons.home),
+          Icon(Icons.search),
+          Icon(Icons.add_a_photo),
+          Icon(Icons.card_travel),
+          Icon(Icons.person),
         ],
       ),
     );
