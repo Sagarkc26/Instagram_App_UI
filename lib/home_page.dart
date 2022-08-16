@@ -47,9 +47,9 @@ class _HomePageState extends State<HomePage> {
       ),
       backgroundColor: Colors.deepPurple.shade100,
       body: Column(
-        children: const [
+        children: [
           StoryWidget(),
-          Divider(
+          const Divider(
             color: Colors.grey,
           ),
           Expanded(

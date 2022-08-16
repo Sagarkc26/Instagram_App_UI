@@ -1,33 +1,82 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_ui/widget/model.dart';
 
 class PostWidget extends StatelessWidget {
-  const PostWidget({Key? key}) : super(key: key);
+  PostWidget({Key? key}) : super(key: key);
+
+  List<Map<String, String>> post = [
+    {
+      "name": "Sagarkc_26",
+      "address": "Lamahi,Dang",
+      "image": "images/sagar.jpg",
+    },
+    {
+      "name": "ManiRam k.c.",
+      "address": "Lamahi,Dang",
+      "image": "images/daddy.jpg",
+    },
+    {
+      "name": "Laxmi k.c.",
+      "address": "Lamahi,Dang",
+      "image": "images/mummy.jpg",
+    },
+    {
+      "name": "kc_sudha23",
+      "address": "Lamahi,Dang",
+      "image": "images/sudha.jpg",
+    },
+    {
+      "name": "Liza_Dangi",
+      "address": "Lamahi,Dang",
+      "image": "images/liza.jpg",
+    },
+    {
+      "name": "neupane_suman",
+      "address": "Butwal,Rupandehi",
+      "image": "images/suman.jpg",
+    },
+    {
+      "name": "siddhu",
+      "address": "kalanki,KTM",
+      "image": "images/siddhu.jpg",
+    },
+    {
+      "name": "G1R",
+      "address": "Greenland,KTM",
+      "image": "images/giri.jpg",
+    },
+    {
+      "name": "Anuj",
+      "address": "Gaughaha,Jhapa",
+      "image": "images/anuj.jpg",
+    },
+  ];
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 3,
+      itemCount: post.length,
       itemBuilder: (context, index) {
         return Column(
           children: [
-            const ListTile(
+            ListTile(
               leading: CircleAvatar(
-                backgroundImage: AssetImage("images/circle.png"),
+                backgroundImage: AssetImage('${post[index]["image"]}'),
               ),
-              title: Text("Sagarkc_26"),
-              subtitle: Text("Lamahi,Dang"),
+              title: Text('${post[index]["name"]}'),
+              subtitle: Text('${post[index]["address"]}'),
               trailing: IconButton(
-                onPressed: null,
-                icon: Icon(Icons.more_vert),
+                onPressed: () {},
+                icon: const Icon(Icons.more_vert),
               ),
             ),
             Container(
               height: 390,
               width: MediaQuery.of(context).size.width,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: AssetImage("images/skc.jpg"),
+                  image: AssetImage('${post[index]["image"]}'),
                 ),
               ),
             ),
