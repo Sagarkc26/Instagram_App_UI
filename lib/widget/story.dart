@@ -12,7 +12,7 @@ class StoryWidget extends StatelessWidget {
     {"images": 'images/suman.jpg', "username": "Suman"},
     {"images": 'images/siddhu.jpg', "username": "Siddhu"},
     {"images": 'images/giri.jpg', "username": "G1R"},
-    {"images": 'images/anuj.jpg', "username": "Anuj"},
+    {"images": 'images/anuj.jpg', "username": "R3X"},
   ];
 
   @override

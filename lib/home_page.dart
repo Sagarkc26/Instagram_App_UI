@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:instagram_ui/bottomnavbar.dart';
 import 'package:instagram_ui/widget/post_widget.dart';
 import 'package:instagram_ui/widget/story.dart';
 
