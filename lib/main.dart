@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_ui/home_page.dart';
 import 'package:instagram_ui/starting_page.dart';
 
 void main() => runApp(const MyApp());

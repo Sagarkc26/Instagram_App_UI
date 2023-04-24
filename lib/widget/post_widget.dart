@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_ui/widget/model.dart';
 
 class PostWidget extends StatelessWidget {
   PostWidget({Key? key}) : super(key: key);
